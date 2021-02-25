@@ -3,25 +3,26 @@
 }
 
 .App-header {
-  height: 80px;
+  height: 180px;
   background-color: #282c34;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(5px + 2vmin);
+  font-size: calc(10px + 2vmin);
   color: white;
+  margin-bottom: 20px;
 }
 
 .MainTitle {
-  font-size: 25px;
+  font-size: 45px;
   margin-bottom: 0%;
 }
 
 .Subtitle {
   margin: 0, 0, 10, 0 ;
   color: #666666;
-  font-size: 15px;
+  font-size: 25px;
 }
 
 
