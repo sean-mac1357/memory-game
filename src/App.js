@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MemoryCard from './components/MemoryCard';
+import Winner from './components/Fireworks'
 
 import './App.css';
 
@@ -42,7 +43,7 @@ class App extends Component {
     }
     let cardToFlip = {...this.state.deck[cardIndex]};
     cardToFlip.isFlipped = true;
-    
+
     let newPickedCards = this.state.pickedCards.concat(cardIndex);
     let newDeck = this.state.deck.map((card, index) => {
       if (cardIndex === index){
@@ -58,6 +59,8 @@ class App extends Component {
       }
       newPickedCards = []
     }
+    console.log("newDeck is: ", newDeck);
+    
     this.setState({
       deck: newDeck,
       pickedCards: newPickedCards
@@ -99,6 +102,7 @@ class App extends Component {
           <h1 className="MainTitle">Memory Game</h1>
           <h3 className="Subtitle">Match cards to win</h3>
         </header>
+        {/* <Winner /> */}
         <div>
           {cardsJSX.slice(0,4)}
         </div>
@@ -111,9 +115,10 @@ class App extends Component {
         <div>
           {cardsJSX.slice(12,16)}
         </div>
-        
       </div>
     );
   }
 }
+
+
 export default App;
